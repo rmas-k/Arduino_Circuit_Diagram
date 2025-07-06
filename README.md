@@ -1,3 +1,23 @@
+COD: 
+int buttons[3] = {2, 3, 4};
+int leds[3] = {8, 9, 10};
+
+void setup() {
+    for (int i = 0; i < 3; i++) {
+        pinMode(buttons[i], INPUT_PULLUP);
+        pinMode(leds[i], OUTPUT);
+    }
+}
+
+void loop() {
+    for (int i = 0; i < 3; i++) {
+        int state = digitalRead(buttons[i]);
+        digitalWrite(leds[i], !state);
+    }
+}
+
+/////////
+
 # 🔌 Arduino Circuit Diagram
 
 This repository contains the circuit design files and Arduino code for a basic smart circuit project.
